@@ -34,8 +34,8 @@ Level-Up Gamer es una aplicación web que permite a los usuarios navegar por un 
 ## Instalación y Ejecución
 
 1. Clonar el repositorio:
-   git clone [URL-del-repositorio]
-   cd levelup-gamer-frontend
+   -git clone https://github.com/vichinho/levelup-gamer-frontend
+   -cd levelup-gamer-frontend
 
 2. Instalar dependencias:
 
