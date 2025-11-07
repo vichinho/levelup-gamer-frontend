@@ -1,0 +1,67 @@
+.gamer-navbar {
+  background-color: #ffffff !important;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 1rem 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.brand-title {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  color: #2c3e50 !important;
+  transition: color 0.3s ease;
+}
+
+.brand-title:hover {
+  color: #3498db !important;
+}
+
+.neon-text {
+  color: #3498db;
+  font-weight: 700;
+}
+
+.gamer-navbar .nav-link {
+  color: #2c3e50 !important;
+  margin: 0 0.75rem;
+  transition: color 0.3s ease;
+  font-weight: 500;
+  font-size: 0.95rem;
+  position: relative;
+}
+
+.gamer-navbar .nav-link:hover {
+  color: #3498db !important;
+}
+
+.gamer-navbar .nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #3498db;
+  transition: width 0.3s ease;
+}
+
+.gamer-navbar .nav-link:hover::after {
+  width: 100%;
+}
+
+.navbar-toggler {
+  border: none;
+  padding: 0.5rem;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.badge {
+  font-weight: 600;
+  padding: 0.35em 0.65em;
+  border-radius: 50px;
+}

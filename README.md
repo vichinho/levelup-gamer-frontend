@@ -1,70 +1,99 @@
-# Getting Started with Create React App
+# LEVEL-UP GAMER
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Tienda online de productos gaming desarrollada con React y Bootstrap para la evaluación parcial 2 de Desarrollo FullStack II.
 
-## Available Scripts
+## Descripción del Proyecto
 
-In the project directory, you can run:
+Level-Up Gamer es una aplicación web que permite a los usuarios navegar por un catálogo de productos gaming, agregar productos al carrito de compras, registrarse como usuarios y gestionar su perfil. El proyecto incluye validaciones para usuarios mayores de 18 años y descuentos automáticos del 20% para correos institucionales de DuocUC.
 
-### `npm start`
+## Características Principales
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Catálogo de productos con filtros por categoría y búsqueda
+- Carrito de compras con actualización de cantidades
+- Sistema de registro y login de usuarios
+- Validación de edad (mayores de 18 años)
+- Descuento automático del 20% para correos @duocuc.cl
+- Código de referido único por usuario
+- Diseño responsivo adaptado a diferentes dispositivos
+- Interfaz minimalista con animaciones suaves
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Tecnologías Utilizadas
 
-### `npm test`
+- React 18
+- React Router DOM
+- Bootstrap 5
+- React-Bootstrap
+- CSS3 con diseño responsivo
+- Jest y React Testing Library para pruebas
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Requisitos Previos
 
-### `npm run build`
+- Node.js (versión 14 o superior)
+- npm (versión 6 o superior)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Instalación y Ejecución
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Clonar el repositorio:
+   git clone [URL-del-repositorio]
+   cd levelup-gamer-frontend
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. Instalar dependencias:
 
-### `npm run eject`
+- npm install
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+3. Ejecutar el proyecto en modo desarrollo:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- npm start
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+4. Abrir en el navegador:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- http://localhost:3000
 
-## Learn More
+## Componentes Testeados
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- ProductCard: Validación de renderizado y funcionalidad del carrito
+- FilterBar: Funcionalidad de búsqueda y filtrado
+- ProductReview: Sistema de reseñas y calificaciones
+- RegisterForm: Validaciones de registro de usuario
+- Validators: Funciones de validación de email, edad y contraseñas
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Funcionalidades Implementadas
 
-### Code Splitting
+### Registro de Usuarios
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- Validación de email
+- Verificación de edad (mayores de 18 años)
+- Validación de contraseñas coincidentes
+- Generación automática de código de referido
 
-### Analyzing the Bundle Size
+### Gestión del Carrito
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- Agregar productos con cantidades personalizadas
+- Actualizar cantidades desde el carrito
+- Eliminar productos individuales
+- Vaciar carrito completo
+- Cálculo automático de subtotales y totales
+- Aplicación de descuentos según tipo de usuario
 
-### Making a Progressive Web App
+### Catálogo de Productos
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- Visualización de productos por categorías
+- Búsqueda por nombre o descripción
+- Filtrado por categoría específica
+- Información detallada de cada producto
 
-### Advanced Configuration
+## Validaciones Implementadas
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- Email válido (formato correcto)
+- Edad mínima de 18 años
+- Contraseña mínima de 6 caracteres
+- Confirmación de contraseña
+- Detección automática de correos @duocuc.cl para descuentos
 
-### Deployment
+## Autor
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Desarrollado como proyecto académico para DSY1104 - Desarrollo FullStack II
 
-### `npm run build` fails to minify
+## Notas Adicionales
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Este proyecto fue creado con Create React App y sigue las mejores prácticas de desarrollo frontend moderno. El diseño minimalista utiliza una paleta de colores profesional con fuentes Inter y Poppins para una mejor experiencia de usuario.
