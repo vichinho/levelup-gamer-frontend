@@ -4,6 +4,7 @@ import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import HomePage from "./pages/HomePage";
 import ProductPage from "./pages/ProductPage";
+import ProductDetailPage from "./pages/ProductDetailPage";
 import CartPage from "./pages/CartPage";
 import ProfilePage from "./pages/ProfilePage";
 import AuthPage from "./pages/AuthPage";
@@ -52,7 +53,6 @@ function App() {
     setCartItems([]);
   };
 
-  // Funciones CRUD para productos
   const addProduct = (product) => {
     setProducts((prevProducts) => [...prevProducts, product]);
   };
@@ -69,7 +69,6 @@ function App() {
     setProducts((prevProducts) =>
       prevProducts.filter((product) => product.id !== productId)
     );
-    // También eliminar del carrito si existe
     removeFromCart(productId);
   };
 
@@ -87,6 +86,12 @@ function App() {
               path="/products/:category"
               element={
                 <ProductPage products={products} addToCart={addToCart} />
+              }
+            />
+            <Route
+              path="/product/:productId"
+              element={
+                <ProductDetailPage products={products} addToCart={addToCart} />
               }
             />
             <Route

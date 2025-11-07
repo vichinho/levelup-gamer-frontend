@@ -20,7 +20,6 @@ const HomePage = ({ products, addToCart }) => {
 
   return (
     <>
-      {/* Hero Section con Animación */}
       <div className="hero-section">
         <div className="hero-background">
           <div className="gradient-overlay"></div>
@@ -38,7 +37,6 @@ const HomePage = ({ products, addToCart }) => {
         </Container>
       </div>
 
-      {/* Catálogo de Productos */}
       <Container className="py-5">
         <FilterBar
           categories={CATEGORIES}

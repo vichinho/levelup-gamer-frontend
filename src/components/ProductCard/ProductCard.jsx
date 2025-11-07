@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { Card, Button } from "react-bootstrap";
 import "./ProductCard.css";
 
@@ -17,30 +18,46 @@ const ProductCard = ({ product, onAddToCart }) => {
 
   return (
     <Card className="product-card h-100">
-      <div className="product-image-container">
-        <Card.Img
-          variant="top"
-          src={
-            product.image || "https://via.placeholder.com/300x200?text=Product"
-          }
-          alt={product.name}
-          className="product-image"
-        />
-        {product.discount && (
-          <span className="discount-badge">-{product.discount}%</span>
-        )}
-      </div>
+      <Link
+        to={`/product/${product.id}`}
+        style={{ textDecoration: "none", color: "inherit" }}
+      >
+        <div className="product-image-container">
+          <Card.Img
+            variant="top"
+            src={
+              product.image ||
+              "https://via.placeholder.com/300x200?text=Product"
+            }
+            alt={product.name}
+            className="product-image"
+          />
+          {product.discount && (
+            <span className="discount-badge">-{product.discount}%</span>
+          )}
+        </div>
+      </Link>
+
       <Card.Body className="d-flex flex-column">
         <Card.Subtitle className="mb-2 text-secondary product-code">
           {product.code}
         </Card.Subtitle>
-        <Card.Title className="product-title">{product.name}</Card.Title>
+
+        <Link
+          to={`/product/${product.id}`}
+          style={{ textDecoration: "none", color: "inherit" }}
+        >
+          <Card.Title className="product-title">{product.name}</Card.Title>
+        </Link>
+
         <Card.Text className="product-category text-secondary">
           {product.category}
         </Card.Text>
+
         <Card.Text className="product-description text-secondary">
           {product.description}
         </Card.Text>
+
         <div className="mt-auto">
           <div className="product-price mb-3">
             ${product.price.toLocaleString("es-CL")} CLP
@@ -61,7 +78,7 @@ const ProductCard = ({ product, onAddToCart }) => {
               className="add-to-cart-btn"
               disabled={isAdding}
             >
-              {isAdding ? "✓ Agregado" : "Agregar"}
+              {isAdding ? "Agregado" : "Agregar"}
             </Button>
           </div>
         </div>
